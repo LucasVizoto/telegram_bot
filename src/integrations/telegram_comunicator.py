@@ -1,7 +1,6 @@
-from os import getenv
-from dotenv import load_dotenv
-load_dotenv()
 from telebot import TeleBot
 
-API_TOKEN = getenv('BOT_TOKEN')
+from config.env import env_variables
+
+API_TOKEN = env_variables['API_TOKEN']
 bot = TeleBot(API_TOKEN)

@@ -1,10 +1,10 @@
 import google.generativeai as genai
-from os import getenv
 
-from config.gemini_infos import gemini_infos
 
-api_key = gemini_infos['API_KEY']
-google_model = gemini_infos['MODEL']
+from config.env import env_variables
+
+api_key = env_variables['API_KEY']
+google_model = env_variables['MODEL']
 
 genai.configure(api_key=api_key)
 
